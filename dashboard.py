@@ -112,7 +112,7 @@ st.pyplot(fig)
 
 
 #boxplot
-box = plt.boxplot(
+box = ax.boxplot(
     [df['GPA Baseline'],df['GPA Post AI']],
     patch_artist=True,
     tick_labels=['Before AI','After AI']
