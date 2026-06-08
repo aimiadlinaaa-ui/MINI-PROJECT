@@ -33,15 +33,15 @@ st.audio(audio_bytes, format='audio/mp3')
 df=pd.read_csv("AI_Impact_Student_Life_2026.csv")
 #df = pd.read_csv(upload_file)
 
-df =df.rename(columns={'Student_ID':'Student ID'})
-df =df.rename(columns={'Primary_AI_Tool':'Primary AI Tool'})
-df =df.rename(columns={'Task_Frequency_Daily':'Task Frequency Daily'})
-df =df.rename(columns={'Main_Usage_Case':'Main Usage Case'})
-df =df.rename(columns={'GPA_Baseline':'GPA Baseline'})
-df =df.rename(columns={'GPA_Post_AI':'GPA Post AI'})
-df =df.rename(columns={'Time_Saved_Hours_Weekly':'Time Saved Hours Weekly'})
-df =df.rename(columns={'AI_Ethics_Concern':'AI Ethics Concern'})
-df =df.rename(columns={'Career_Confidence_Score':'Career Confidence Score'})
+df = df.rename(columns={'Student_ID':'Student ID'})
+df = df.rename(columns={'Primary_AI_Tool':'Primary AI Tool'})
+df = df.rename(columns={'Task_Frequency_Daily':'Task Frequency Daily'})
+df = df.rename(columns={'Main_Usage_Case':'Main Usage Case'})
+df = df.rename(columns={'GPA_Baseline':'GPA Baseline'})
+df = df.rename(columns={'GPA_Post_AI':'GPA Post AI'})
+df = df.rename(columns={'Time_Saved_Hours_Weekly':'Time Saved Hours Weekly'})
+df = df.rename(columns={'AI_Ethics_Concern':'AI Ethics Concern'})
+df = df.rename(columns={'Career_Confidence_Score':'Career Confidence Score'})
 
 
 #pie chart
@@ -52,8 +52,6 @@ fig, ax = plt.subplots()
 
 colors = ['#8C85C7','#A7C1EB','#F2DAE8','#F2BAD8','#F2A5D2']
 
-plt.figure(figsize=(8,5))
-
 ax.pie(
     usage_counts,
     labels=usage_counts.index,
@@ -61,9 +59,6 @@ ax.pie(
     colors=colors
 )
 
-plt.title('Distribution of Main Usage Cases')
-
-plt.show()
 st.pyplot(fig)
 
 
