@@ -23,7 +23,7 @@ st.image('polka.jpg', width=1500)
 
 #title
 st.title("AI Usage Among Students Dashboard")
-st.write("Analysis of AI usage, academic perfomance and career confidence among students.")
+st.write("Analysis of AI usage and academic perfomance.")
 
 
 #audio
@@ -110,6 +110,15 @@ bars = ax.bar(
     tool_time.values,
     color=['#D4EEE3','#FCF3F0','#E5EBD7','#F7D7D7','#F6E8DE']
 )
+for bar in bars:
+    height = bar.get_height()
+    plt.text(
+        bar.get_x() + bar.get_width()/2,
+        height,
+        f'{int(height)}',
+        ha='center',
+        va='bottom'
+    )
 
 ax.set_xlabel('AI Tool')
 ax.set_ylabel('Hours Saved')
