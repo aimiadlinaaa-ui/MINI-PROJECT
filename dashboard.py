@@ -69,7 +69,6 @@ st.subheader("Most Popular AI Tool")
 
 tool_counts = df['Primary AI Tool'].value_counts()
 fig, ax = plt.subplots()
-ax.bar(tool_counts.index, tool_counts.values)
 
 bars = ax.bar(
     tool_counts.index,
@@ -128,6 +127,10 @@ st.pyplot(fig)
 
 
 #boxplot
+st.subheader("GPA Before and After AI Usage")
+
+fig, ax = plt.subplots(figsize=(6,5))
+
 box = ax.boxplot(
     [df['GPA Baseline'],df['GPA Post AI']],
     patch_artist=True,
@@ -138,4 +141,7 @@ colors = ['#FFDFC9','#DFBBBB']
 
 for patch, color in zip(box['boxes'], colors):
     patch.set_facecolor(color)
+
+ax.set_ylabel('GPA')
+ax.set_title('GPA Before and After AI Usage')
 st.pyplot(fig)
