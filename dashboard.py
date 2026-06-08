@@ -61,7 +61,7 @@ colors = [
     '#F2A5D2'
 ]
 
-plt.figure(figsize=(5,5))
+plt.figure(figsize=(2,3))
 
 ax.pie(
     usage_counts,
