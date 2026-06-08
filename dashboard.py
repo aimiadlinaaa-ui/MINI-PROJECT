@@ -71,7 +71,7 @@ tool_counts = df['Primary AI Tool'].value_counts()
 fig, ax = plt.subplots()
 ax.bar(tool_counts.index, tool_counts.values)
 
-ax.bar(
+bars = ax.bar(
     tool_counts.index,
     tool_counts.values,
     color=['#E5EBD7','#FCF3F0','#D4EEE3','#F6E8DE','#F7D7D7']
