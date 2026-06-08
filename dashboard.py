@@ -54,11 +54,11 @@ usage_counts = df['Main Usage Case'].value_counts()
 fig, ax = plt.subplots()
 
 colors = [
-    '#FF9999',
-    '#66B3FF',
-    '#99FF99',
-    '#FFD700',
-    '#C2C2F0'
+    '#8C85C7',
+    '#A7C1EB',
+    '#F2DAE8',
+    '#F2BAD8',
+    '#F2A5D2'
 ]
 
 plt.figure(figsize=(5,5))
