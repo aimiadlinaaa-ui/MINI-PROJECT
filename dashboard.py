@@ -95,6 +95,21 @@ plt.show()
 st.pyplot(fig)
 
 
+#boxplot
+box = ax.boxplot(
+    [df['GPA Baseline'],df['GPA Post AI']],
+    patch_artist=True,
+    tick_labels=['Before AI','After AI']
+)
+
+colors = ['#FFDFC9','#DFBBBB']
+
+for patch, color in zip(box['boxes'], colors):
+    patch.set_facecolor(color)
+st.pyplot(fig)
+
+
+
 #bar chart 2
 st.subheader("Average Weekly Time Saved by AI Tool")
 fig, ax = plt.subplots(figsize=(8,5))
@@ -124,18 +139,4 @@ for bar in bars:
 ax.set_xlabel('AI Tool')
 ax.set_ylabel('Hours Saved')
 
-st.pyplot(fig)
-
-
-#boxplot
-box = ax.boxplot(
-    [df['GPA Baseline'],df['GPA Post AI']],
-    patch_artist=True,
-    tick_labels=['Before AI','After AI']
-)
-
-colors = ['#FFDFC9','#DFBBBB']
-
-for patch, color in zip(box['boxes'], colors):
-    patch.set_facecolor(color)
 st.pyplot(fig)
