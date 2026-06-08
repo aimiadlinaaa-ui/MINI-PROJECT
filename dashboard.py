@@ -49,13 +49,7 @@ st.subheader("Main Usage Case Distribution")
 usage_counts = df['Main Usage Case'].value_counts()
 fig, ax = plt.subplots()
 
-colors = [
-    '#8C85C7',
-    '#A7C1EB',
-    '#F2DAE8',
-    '#F2BAD8',
-    '#F2A5D2'
-]
+colors = ['#8C85C7','#A7C1EB','#F2DAE8','#F2BAD8','#F2A5D2']
 
 plt.figure(figsize=(8,5))
 
