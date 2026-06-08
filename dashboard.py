@@ -61,7 +61,7 @@ colors = [
     '#F2A5D2'
 ]
 
-plt.figure(figsize=(2,3))
+plt.figure(figsize=(8,5))
 
 ax.pie(
     usage_counts,
@@ -110,7 +110,7 @@ tool_time = (
 bars = ax.bar(
     tool_time.index,
     tool_time.values,
-    color=['#FF6B6B','#4ECDC4','#45B7D1','#FFD93D','#6BCB77']
+    color=['#D4EEE3','#FCF3F0','#E5EBD7','#F7D7D7','#F6E8DE']
 )
 
 ax.set_title('Average Weekly Time Saved by AI Tool')
