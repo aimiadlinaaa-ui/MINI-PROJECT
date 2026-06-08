@@ -19,8 +19,6 @@ st.markdown(
 #st.image(r'C:\Users\welcome\Desktop\BSMS1306\streamlit\Header.png')
 st.image('polka.jpg', width=1500)
 
-st.date_input("Select a date")
-
 st.title("AI Usage Among Students Dashboard")
 st.write("Analysis of AI usage, academic perfomance and career confidence among students.")
 
