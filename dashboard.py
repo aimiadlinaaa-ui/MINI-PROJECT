@@ -43,10 +43,6 @@ df =df.rename(columns={'Time_Saved_Hours_Weekly':'Time Saved Hours Weekly'})
 df =df.rename(columns={'AI_Ethics_Concern':'AI Ethics Concern'})
 df =df.rename(columns={'Career_Confidence_Score':'Career Confidence Score'})
 
-#show data
-st.subheader("Raw Data")
-st.write(df)
-
 #pie chart
 st.subheader("Main Usage Case Distribution")
 
