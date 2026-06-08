@@ -122,3 +122,4 @@ colors = ['#FFDFC9','#DFBBBB']
 
 for patch, color in zip(box['boxes'], colors):
     patch.set_facecolor(color)
+st.pyplot(fig)
