@@ -113,7 +113,6 @@ bars = ax.bar(
     color=['#D4EEE3','#FCF3F0','#E5EBD7','#F7D7D7','#F6E8DE']
 )
 
-ax.set_title('Average Weekly Time Saved by AI Tool')
 ax.set_xlabel('AI Tool')
 ax.set_ylabel('Hours Saved')
 
