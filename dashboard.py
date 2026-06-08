@@ -3,6 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import plotly.express as px
 
+
 #background
 st.markdown(
     """
@@ -16,13 +17,16 @@ st.markdown(
 )
 
 
-#st.image(r'C:\Users\welcome\Desktop\BSMS1306\streamlit\Header.png')
+#add image
 st.image('polka.jpg', width=1500)
 
+
+#title
 st.title("AI Usage Among Students Dashboard")
 st.write("Analysis of AI usage, academic perfomance and career confidence among students.")
 
-#lagu
+
+#audio
 audio_file = open('Jennifer Lopez - On The Floor ft. Pitbull.mp3', 'rb')
 audio_bytes = audio_file.read()
 
@@ -50,13 +54,11 @@ st.subheader("Main Usage Case Distribution")
 usage_counts = df['Main Usage Case'].value_counts()
 fig, ax = plt.subplots()
 
-colors = ['#8C85C7','#A7C1EB','#F2DAE8','#F2BAD8','#F2A5D2']
-
 ax.pie(
     usage_counts,
     labels=usage_counts.index,
     autopct='%1.1f%%',
-    colors=colors
+    colors=['#8C85C7','#A7C1EB','#F2DAE8','#F2BAD8','#F2A5D2']
 )
 
 st.pyplot(fig)
@@ -68,13 +70,22 @@ st.subheader("Most Popular AI Tool")
 tool_counts = df['Primary AI Tool'].value_counts()
 fig, ax = plt.subplots()
 ax.bar(tool_counts.index, tool_counts.values)
-plt.figure(figsize=(5,5))
 
 ax.bar(
     tool_counts.index,
     tool_counts.values,
     color=['#E5EBD7','#FCF3F0','#D4EEE3','#F6E8DE','#F7D7D7']
 )
+
+for bar in bars:
+    height = bar.get_height()
+    plt.text(
+        bar.get_x() + bar.get_width()/2,
+        height,
+        f'{int(height)}',
+        ha='center',
+        va='bottom'
+    )
 
 plt.title('Most Popular AI Tools')
 plt.xlabel('AI Tool')
