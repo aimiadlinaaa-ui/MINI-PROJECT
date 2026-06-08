@@ -143,5 +143,4 @@ for patch, color in zip(box['boxes'], colors):
     patch.set_facecolor(color)
 
 ax.set_ylabel('GPA')
-ax.set_title('GPA Before and After AI Usage')
 st.pyplot(fig)
