@@ -87,7 +87,7 @@ plt.figure(figsize=(5,5))
 ax.bar(
     tool_counts.index,
     tool_counts.values,
-    color='#B39EB5'
+    color=['#E5EBD7','#FCF3F0','#D4EEE3','#F6E8DE','#F7D7D7']
 )
 
 plt.title('Most Popular AI Tools')
