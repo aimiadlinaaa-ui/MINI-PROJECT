@@ -118,7 +118,7 @@ for bar in bars:
         height,
         f'{height:.1f}',
         ha='center',
-        va='bottom
+        va='bottom'
         )
 
 ax.set_xlabel('AI Tool')
