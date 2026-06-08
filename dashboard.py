@@ -110,15 +110,16 @@ bars = ax.bar(
     tool_time.values,
     color=['#D4EEE3','#FCF3F0','#E5EBD7','#F7D7D7','#F6E8DE']
 )
+
 for bar in bars:
     height = bar.get_height()
-    plt.text(
+    ax.text(
         bar.get_x() + bar.get_width()/2,
         height,
-        f'{int(height)}',
+        f'{height:.1f}',
         ha='center',
-        va='bottom'
-    )
+        va='bottom
+        )
 
 ax.set_xlabel('AI Tool')
 ax.set_ylabel('Hours Saved')
